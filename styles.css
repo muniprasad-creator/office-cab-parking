@@ -1,0 +1,33 @@
+/* Parking grid layout */
+.parking-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 columns */
+    grid-template-rows: repeat(20, 1fr);    /* 20 rows */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Parking box styling */
+.parking-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    min-height: 100px;
+}
+
+.parking-box.occupied {
+    background-color: #ffcc00;
+}
+
+.parking-box:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.parking-box p {
+    font-weight: bold;
+}

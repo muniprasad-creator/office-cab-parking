@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Cab Parking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Office Cab Parking Area</h1>
+        <p>Find where your cab is parked</p>
+
+        <!-- Search car number (for passengers) -->
+        <div class="search-container">
+            <input type="text" id="searchCar" placeholder="Enter Car Number to Find Parking">
+            <button onclick="searchCar()">Search</button>
+        </div>
+
+        <!-- Parking grid -->
+        <div class="parking-grid">
+            <!-- Dynamic parking boxes will be inserted here -->
+        </div>
+
+        <!-- Admin area to input car numbers -->
+        <div class="admin-container">
+            <h2>Cab Driver Area</h2>
+            <form id="carEntryForm">
+                <label for="boxNumber">Parking Box Number:</label>
+                <input type="number" id="boxNumber" min="1" max="200" required>
+
+                <label for="carNumber">Car Number:</label>
+                <input type="text" id="carNumber" required>
+
+                <button type="submit">Park Car</button>
+            </form>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
